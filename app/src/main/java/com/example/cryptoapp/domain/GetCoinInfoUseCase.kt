@@ -1,8 +1,10 @@
 package com.example.cryptoapp.domain
 
 import androidx.lifecycle.LiveData
+import androidx.room.Index
+import javax.inject.Inject
 
-class GetCoinInfoUseCase(
+class GetCoinInfoUseCase @Inject constructor (
     private val repository: CoinRepository
 ) {
    operator fun invoke(fromSymbol:String):LiveData <CoinInfo>{
